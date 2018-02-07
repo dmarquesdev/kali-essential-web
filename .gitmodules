@@ -1,0 +1,9 @@
+[submodule "git-apps/CMSmap"]
+	path = git-apps/CMSmap
+	url = https://github.com/Dionach/CMSmap
+[submodule "git-apps/Fingerprinter"]
+	path = git-apps/Fingerprinter
+	url = https://github.com/erwanlr/Fingerprinter
+[submodule "git-apps/SecLists"]
+	path = git-apps/SecLists
+	url = https://github.com/danielmiessler/SecLists

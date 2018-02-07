@@ -20,6 +20,12 @@ This docker image is based on Kali Linux image, and adds essential applications 
 - tor
 - proxychains
 - netcat
+- masscan
+- exploitdb (searchsploit)
+- droopescan
+- CMSmap
+- SecLists
+- Fingerprinter
 
 ## Exposed Ports
 - 9050 - Tor Network
@@ -27,3 +33,4 @@ This docker image is based on Kali Linux image, and adds essential applications 
 ## Changelog
 - 1.0.0 - Initial deploy
 - 1.0.1 - Added netcat, tor and proxychains
+- 1.0.2 - Added masscan, droopescan, exploitdb and git apps as submodules

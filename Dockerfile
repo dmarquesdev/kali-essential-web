@@ -12,10 +12,20 @@ RUN apt-get update \
 	sqlmap git wfuzz fimap wpscan \
 	vim
 
-RUN apt-get install -y tor proxychains netcat \
+RUN apt-get update \
+	&& apt-get install -y tor proxychains netcat \
 	&& service tor start
 
-ADD docker-entrypoint.sh /opt
+RUN apt-get update \
+	&& apt-get install -y masscan cewl python-pip exploitdb
+
+RUN pip install droopescan
+
+COPY docker-entrypoint.sh /opt
+
+COPY git-apps/CMSmap /opt/CMSmap
+COPY git-apps/SecLists /opt/SecLists
+COPY git-apps/Fingerprinter /opt/Fingerprinter
 
 EXPOSE 9050
 
