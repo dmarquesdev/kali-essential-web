@@ -12,4 +12,13 @@ RUN apt-get update \
 	sqlmap git wfuzz fimap wpscan \
 	vim
 
+RUN apt-get install -y tor proxychains netcat \
+	&& service tor start
+
+ADD docker-entrypoint.sh /opt
+
+EXPOSE 9050
+
+ENTRYPOINT [ "/opt/docker-entrypoint.sh" ]
+
 CMD [ "/bin/bash" ]

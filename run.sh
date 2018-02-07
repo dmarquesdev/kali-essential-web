@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker container run -it --name kali-essential-web --rm  h3llbl4z3r/kali-essential-web
+docker container run -it --rm -p 9050:9050 h3llbl4z3r/kali-essential-web
